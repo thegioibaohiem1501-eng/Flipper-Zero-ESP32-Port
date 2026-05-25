@@ -12,23 +12,23 @@
 
 /* ---- Board metadata ---- */
 #define BOARD_NAME        "Waveshare ESP32-C6-LCD-1.47"
-#define BOARD_TARGET      "esp32c6"
+#define BOARD_TARGET      "esp32s3"
 
 /* ---- Hardware Button Pins ---- */
 #define BOARD_PIN_BUTTON_BOOT   9   /* BOOT button (active low) */
 #define BOARD_PIN_BATTERY_ADC   0   /* BAT_ADC (VCC / 3) */
 
 /* ---- LCD Pins (ST7789V2 via SPI) ---- */
-#define BOARD_PIN_LCD_MOSI      2   /* LCD_DIN */
-#define BOARD_PIN_LCD_SCLK      1   /* LCD_CLK */
+#define BOARD_PIN_LCD_MOSI      17   /* LCD_DIN */
+#define BOARD_PIN_LCD_SCLK      18   /* LCD_CLK */
 #define BOARD_PIN_LCD_DC        15
-#define BOARD_PIN_LCD_CS        14
-#define BOARD_PIN_LCD_RST       22
-#define BOARD_PIN_LCD_BL        23  /* Backlight PWM */
+#define BOARD_PIN_LCD_CS        7
+#define BOARD_PIN_LCD_RST       16
+#define BOARD_PIN_LCD_BL        6  /* Backlight PWM */
 
 /* ---- LCD Display Configuration ---- */
-#define BOARD_LCD_H_RES         320     /* Native width after swap_xy */
-#define BOARD_LCD_V_RES         172     /* Native height after swap_xy */
+#define BOARD_LCD_H_RES         240     /* Native width after swap_xy */
+#define BOARD_LCD_V_RES         135     /* Native height after swap_xy */
 #define BOARD_LCD_SPI_HOST      SPI2_HOST
 #define BOARD_LCD_SPI_FREQ_HZ   (40 * 1000 * 1000)
 #define BOARD_LCD_CMD_BITS      8
@@ -38,7 +38,7 @@
 #define BOARD_LCD_MIRROR_Y      false
 #define BOARD_LCD_INVERT_COLOR  true
 #define BOARD_LCD_GAP_X         0
-#define BOARD_LCD_GAP_Y         34
+#define BOARD_LCD_GAP_Y         40
 #define BOARD_LCD_BL_ACTIVE_LOW false   /* Backlight is active-high (direct drive) */
 
 /* Flipper framebuffer → display color mapping (RGB565, byte-swapped for SPI) */
