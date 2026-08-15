@@ -26,6 +26,7 @@
 #define BOARD_PIN_BTN_OK        0
 #define BOARD_PIN_BTN_BACK      1
 #define BOARD_PIN_BUTTON_BOOT   0  
+#define BOARD_PIN_BATTERY_ADC   2
 
 /* ---- LCD Pins (ILI9341 via SPI) ---- */
 #define BOARD_PIN_LCD_MOSI      17
@@ -143,11 +144,10 @@
 #define BOARD_RFID_UART_NUM     1
 
 /* ---- Battery ---- */
-#define BQ27220_ADDR            0x00
+#define BQ27220_ADDR            0x55
 #define BQ_I2C_PORT             I2C_NUM_0
+#define BQ_I2C_SDA              BOARD_PIN_QWIIC_SDA
+#define BQ_I2C_SCL              BOARD_PIN_QWIIC_SCL
 #define HIGH_DRAIN_CURRENT_THRESHOLD (-200)
-#define FURI_HAL_POWER_VIRTUAL_CAPACITY_MAH     (1520U)
-#define BQ25896_CHARGE_LIMIT    0
-#define BOARD_PIN_BATTERY_ADC   UINT16_MAX
-#define FURI_HAL_POWER_OFF_THRESHOLD_PERCENT    (0U)
-#define FURI_HAL_POWER_SLEEP_THRESHOLD_PERCENT  (0U)
+#define FURI_HAL_POWER_VIRTUAL_CAPACITY_MAH     (1300U)
+#define BQ25896_CHARGE_LIMIT    1280
